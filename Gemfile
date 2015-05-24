@@ -7,15 +7,21 @@ gem 'bcrypt-ruby'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+# And updates gems when needed
+# And auto starts rails server
+gem 'guard-rails'
+# And auto runs migrations
+gem 'guard-migrate'
+gem 'guard-bundler', require: false
 
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   # The following optional lines are part of the advanced setup.
-  # gem 'guard-rspec', '2.5.0'
-  # gem 'spork-rails', '4.0.0'
-  # gem 'guard-spork', '1.5.0'
-  # gem 'childprocess', '0.3.6'
+  gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
@@ -24,12 +30,18 @@ group :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  # Checks ruby code grammar
+  gem 'rubocop', require: false
+  # With rspec
+  gem 'rubocop-rspec'
+  # With guard
+  gem 'guard-rubocop'
 
   # Uncomment this line on OS X.
   # gem 'growl', '1.0.3'
 
   # Uncomment these lines on Linux.
-  # gem 'libnotify', '0.8.0'
+  #gem 'libnotify'
 
   # Uncomment these lines on Windows.
   # gem 'rb-notifu', '0.0.4'
