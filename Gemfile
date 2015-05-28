@@ -22,6 +22,7 @@ group :development, :test do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'childprocess'
+  gem 'guard-livereload'
 end
 
 group :test do
@@ -48,13 +49,15 @@ group :test do
   # gem 'win32console', '1.3.2'
   # gem 'wdm', '0.1.0'
 end
-
+gem 'nokogiri'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'zeus'
+gem 'libnotify'
 
 group :doc do
   gem 'sdoc', require: false
